@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import Navbar from '@/components/Navbar';
+import NavigationBar from '@/components/NavigationBar';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
 import WorkflowShowcase from '@/components/WorkflowShowcase';
@@ -16,7 +16,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
+      <NavigationBar />
       <main className="flex-grow">
         <Hero />
         <Features />
