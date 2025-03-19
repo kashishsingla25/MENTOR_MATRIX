@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -8,7 +8,6 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
@@ -17,6 +16,7 @@ import {
 const NavigationBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +26,11 @@ const NavigationBar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    // Close mobile menu when route changes
+    setIsMenuOpen(false);
+  }, [location]);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -95,11 +100,11 @@ const NavigationBar = () => {
 
           {/* Authentication Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm" className="font-medium transition-all hover:scale-105">
-              Log In
+            <Button variant="outline" size="sm" className="font-medium transition-all hover:scale-105" asChild>
+              <Link to="/login">Log In</Link>
             </Button>
-            <Button size="sm" className="font-medium transition-all hover:scale-105">
-              Sign Up
+            <Button size="sm" className="font-medium transition-all hover:scale-105" asChild>
+              <Link to="/signup">Sign Up</Link>
             </Button>
           </div>
 
@@ -148,11 +153,11 @@ const NavigationBar = () => {
             Contact
           </a>
           <div className="flex flex-col w-full space-y-4 pt-4">
-            <Button variant="outline" className="w-full font-medium">
-              Log In
+            <Button variant="outline" className="w-full font-medium" asChild>
+              <Link to="/login">Log In</Link>
             </Button>
-            <Button className="w-full font-medium">
-              Sign Up
+            <Button className="w-full font-medium" asChild>
+              <Link to="/signup">Sign Up</Link>
             </Button>
           </div>
         </nav>
