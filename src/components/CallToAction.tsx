@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CallToAction = () => {
   return (
@@ -23,10 +24,12 @@ const CallToAction = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-slideUp animate-delay-200">
-            <Button size="lg" className="font-medium group">
-              Get Started
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <Link to="/faculty">
+              <Button size="lg" className="font-medium group">
+                Get Started
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
             <Button size="lg" variant="outline" className="font-medium">
               Contact Sales
             </Button>
