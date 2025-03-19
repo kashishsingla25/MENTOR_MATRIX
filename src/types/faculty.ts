@@ -6,5 +6,4 @@ export interface Faculty {
   specialization: string;
   image: string;
   researchInterests: string[];
-  proposalFormLink: string;
 }

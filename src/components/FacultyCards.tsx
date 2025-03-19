@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import FacultyCard from './FacultyCard';
 import { Input } from '@/components/ui/input';
@@ -18,8 +17,7 @@ const facultyData: Faculty[] = [
       "Natural Language Processing",
       "Computer Vision",
       "Ethical AI Development"
-    ],
-    proposalFormLink: "https://forms.google.com/your-form-link-here"
+    ]
   },
   {
     id: 2,
@@ -32,8 +30,7 @@ const facultyData: Faculty[] = [
       "Low-Power Embedded Systems",
       "Smart Home Technology",
       "Edge Computing"
-    ],
-    proposalFormLink: "https://forms.google.com/your-form-link-here"
+    ]
   },
   {
     id: 3,
@@ -46,8 +43,7 @@ const facultyData: Faculty[] = [
       "Blockchain Applications",
       "Cryptography",
       "Secure Software Development"
-    ],
-    proposalFormLink: "https://forms.google.com/your-form-link-here"
+    ]
   },
   {
     id: 4,
@@ -60,8 +56,7 @@ const facultyData: Faculty[] = [
       "Microservices",
       "Progressive Web Applications",
       "DevOps Practices"
-    ],
-    proposalFormLink: "https://forms.google.com/your-form-link-here"
+    ]
   },
   {
     id: 5,
@@ -74,8 +69,7 @@ const facultyData: Faculty[] = [
       "Data Visualization",
       "Business Intelligence",
       "Statistical Modeling"
-    ],
-    proposalFormLink: "https://forms.google.com/your-form-link-here"
+    ]
   },
   {
     id: 6,
@@ -88,8 +82,7 @@ const facultyData: Faculty[] = [
       "Protein Structure Prediction",
       "Computational Drug Discovery",
       "Systems Biology"
-    ],
-    proposalFormLink: "https://forms.google.com/your-form-link-here"
+    ]
   }
 ];
 
