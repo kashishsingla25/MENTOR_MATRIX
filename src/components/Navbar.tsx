@@ -47,10 +47,13 @@ const Navbar = () => {
             <NavLink href="#contact">Contact</NavLink>
             <div className="flex items-center space-x-4">
               <Button variant="outline" size="sm" className="font-medium transition-all hover:scale-105">
-                Log In
+                <Link to="/login">Log In</Link>
               </Button>
               <Button size="sm" className="font-medium transition-all hover:scale-105">
-                Get Started
+                <Link to="/faculty">Get Started</Link>
+              </Button>
+              <Button variant="outline" size="sm" className="font-medium transition-all hover:scale-105">
+                <Link to="/dashboard">Dashboard</Link>
               </Button>
             </div>
           </nav>
@@ -83,10 +86,13 @@ const Navbar = () => {
           <MobileNavLink href="#contact" onClick={toggleMenu}>Contact</MobileNavLink>
           <div className="flex flex-col w-full space-y-4 pt-4">
             <Button variant="outline" className="w-full font-medium">
-              Log In
+              <Link to="/login" className="w-full">Log In</Link>
             </Button>
             <Button className="w-full font-medium">
-              Get Started
+              <Link to="/faculty" className="w-full">Get Started</Link>
+            </Button>
+            <Button variant="outline" className="w-full font-medium">
+              <Link to="/dashboard" className="w-full">Dashboard</Link>
             </Button>
           </div>
         </nav>
